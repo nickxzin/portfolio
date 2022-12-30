@@ -159,10 +159,8 @@ nav{
 
 .skills{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     background-color: #2F4F2F;
 }
 
@@ -174,15 +172,25 @@ i{
     width: 60px;
 }
 
+.content-skill-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 40%;
+    gap: 30px;
+    top: 50px;
+}
+
 .passar{
     display: flex;
 }
 
 .passar p{
-    display: flex;
+    position: flex;
     width: 500px;
     padding: 0px 0px 0px 20px;
-    /*display: none;*/
+    line-height: 26px;
 }
 
 
@@ -199,5 +207,17 @@ i{
     to{
         letter-spacing: 1px;
         opacity: 100%;
+    }
+}
+
+@keyframes wow {
+    from{
+        visibility: visible;
+        opacity: 0%;
+    }
+
+    to{
+        opacity: 100%;
+        visibility: visible;
     }
 }
