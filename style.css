@@ -177,20 +177,46 @@ i{
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    width: 40%;
     gap: 30px;
-    top: 50px;
 }
 
 .passar{
     display: flex;
+    background-color: gray;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .passar p{
     position: flex;
-    width: 500px;
+    width: auto;
     padding: 0px 0px 0px 20px;
     line-height: 26px;
+}
+
+.fa-html5, .fa-css3-alt{
+    padding-left: 9px;
+}
+
+.fa-python, .fa-unity{
+    padding-left: 6px;
+}
+
+.ht:hover{
+    animation: backGround 2s ease-in-out 0s normal forwards;
+}
+.css:hover{
+    animation: backGround 2s ease-in-out 0s normal forwards;
+}
+.py:hover{
+    animation: backGround 2s ease-in-out 0s normal forwards;
+}
+.gt:hover{
+    animation: backGround 2s ease-in-out 0s normal forwards;
+}
+.un:hover{
+    animation: backGround 2s ease-in-out 0s normal forwards;
 }
 
 
@@ -212,12 +238,21 @@ i{
 
 @keyframes wow {
     from{
-        visibility: visible;
-        opacity: 0%;
+        transform: translateX(0px);
     }
 
     to{
-        opacity: 100%;
-        visibility: visible;
+        transform: translateX(-200px);
+    }
+}
+
+@keyframes backGround {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        width: 600px;
+        transform: translateX(-275px);
     }
 }
