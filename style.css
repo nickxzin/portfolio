@@ -87,6 +87,7 @@ nav{
 
 .sobre h1{
     display: flex;
+    font-size: 50px;
 }
 
 .sobre p{
@@ -101,6 +102,8 @@ nav{
 .sobre img{
     float: right;
 }
+
+/*---------------------------------------------------------Projects---------------------------------------------------------*/
 
 .projects{
     width: auto;
@@ -129,13 +132,18 @@ nav{
 
 .branco p{
     position: relative;
+    font-family: "Poppins";
     text-align: center;
     align-self: center;
+    font-size: 35px;
     text-indent: 0px;
+    font-weight: 800;
+    cursor: default;
 }
 
 .projects h2{
     margin-bottom: 80px;
+    font-size: 50px;
 }
 
 .animacao-aparecer{
@@ -148,11 +156,12 @@ nav{
     height: 100%;
 }
 
-/*skills*/
 
 .animacao-aparecer:hover{
     animation: opacity 1.5s linear 0.2s 1 normal forwards;
 }
+
+/*skills*/
 
 .skills{
     display: flex;
@@ -201,32 +210,75 @@ i{
     z-index: 5;
     padding-left: 85px;
     padding-right: 5px;
-    transition: 0s ease-in-out;
     opacity: 0;
 }
 
 .content p{
+    display: none;
     line-height: 21px;
 }
 
 .passar:hover .content{
     animation: slidein 1s ease-in-out 0s reverse forwards;
+    transition: 1s ease-in-out;
+}
+
+.passar:not(:hover) .content{
+    animation: slidein-reverse 1.8s ease-in-out 0s reverse forwards;
+}
+
+.passar:hover .content p{
+    display: block;
+    transition: 1.8s ease-in-out;
+}
+
+.passar:not(:hover) .content p{
+    display: flex;
 }
 
 .ht:hover{
     animation: backGround 1s ease-in-out 0s normal forwards;
+    transition: 1s ease-in-out;
 }
+
+.ht:not(:hover){
+    animation: backGround-reverse 1s ease-in-out 0s normal forwards;
+}
+
 .css:hover{
     animation: backGround 1s ease-in-out 0s normal forwards;
+    transition: 1s ease-in-out;
 }
+
+.css:not(:hover){
+    animation: backGround-reverse 1s ease-in-out 0s normal forwards;
+}
+
 .py:hover{
     animation: backGround 1s ease-in-out 0s normal forwards;
+    transition: 1s ease-in-out;
 }
+
+.py:not(:hover){
+    animation: backGround-reverse 1s ease-in-out 0s normal forwards;
+}
+
 .gt:hover{
     animation: backGround 1s ease-in-out 0s normal forwards;
+    transition: 1s ease-in-out;
 }
+
+.gt:not(:hover){
+    animation: backGround-reverse 1s ease-in-out 0s normal forwards;
+}
+
 .g:hover{
     animation: backGround 1s ease-in-out 0s normal forwards;
+    transition: 1s ease-in-out;
+}
+
+.g:not(:hover){
+    animation: backGround-reverse 1s ease-in-out 0s normal forwards;
 }
 
 /*Footer*/
@@ -291,6 +343,17 @@ footer p{
     }
 }
 
+@keyframes slidein-reverse {
+    from{
+        opacity: 0;
+        transform: translate(100%);
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 
 @keyframes opacity{
     from{
@@ -326,5 +389,57 @@ footer p{
     to{
         width: 625px;
         transform: translateX(-275px);
+    }
+}
+
+@keyframes backGround-reverse {
+    from{
+        width: 625px;
+        transform: translateX(-275px);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+/*Responsividade*/
+
+@media (max-width: 800px) {
+    .galeria > :nth-child(3), .galeria > :nth-child(1){
+        display: none;
+    }
+
+    .galeria .branco{
+        width: 80%;
+    }
+
+    .sobre{
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .sobre img{
+        width: 200px;
+        height: 230px;
+    }
+
+    .texto h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 540px) {
+    .texto p{
+        width: 300px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px){
+    .texto p{
+        width: 280px;
+        font-size: 12px;
     }
 }
