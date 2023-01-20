@@ -75,7 +75,7 @@ nav label{
     color: #3f663f;
     transition: all 0.5s;
 }
-/*Conteudo*/
+/*------------------------------------------Conteudo------------------------------------------*/
 
 .container:only-child{
     height: 100vh;
@@ -465,7 +465,7 @@ footer p{
 }
 
 
-/*Responsividade*/
+/*------------------------------------------Responsividade------------------------------------------*/
 
 @media (max-width: 1350px){
     footer{
